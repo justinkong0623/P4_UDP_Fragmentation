@@ -4,7 +4,8 @@ Setup on Window Computer
 
 ![image](https://github.com/user-attachments/assets/96fd70ee-1a34-47af-8375-daaa845fbdf6)  
 
-2.Add UDP_Fragmentation.p4, configuration.p4cfg, and sleep.c to the project.
+2.Add UDP_Fragmentation.p4, configuration.p4cfg, and sleep.c to the project.  
+
 3.Change the debug mode from Simulation to Hardware.  
 
 ![image](https://github.com/user-attachments/assets/e6e4a9fa-489b-4166-bad6-a22b67af0ca6)  
