@@ -1,5 +1,6 @@
 # P4_UDP_Fragmetation
-Setup on Window Computer
+"Setup on Window Computer"  
+
 1.Create a new project in Programmer Studio.  
 
 ![image](https://github.com/user-attachments/assets/96fd70ee-1a34-47af-8375-daaa845fbdf6)  
@@ -20,7 +21,7 @@ Setup on Window Computer
 
 6.Rebuild the project (Alt + F7).
 
-Setup on Linux Computer 1 (with SmartNIC)  
+"Setup on Linux Computer 1 (with SmartNIC)"  
 
 sudo systemctl start nfp-sdk6-rte  
 
@@ -29,12 +30,12 @@ sudo systemctl start nfp-hwdbg-srv
 sudo make setup  
 
 
-Setup on Linux Computer 2 (without SmartNIC)  
+"Setup on Linux Computer 2 (without SmartNIC)"  
 
 sudo make2  
 
 
-Setup on Window Computer  
+"Setup on Window Computer"  
 
 Start Debugging (F12)  
 
