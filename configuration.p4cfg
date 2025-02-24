@@ -1,0 +1,125 @@
+{
+    "tables": {
+        "t_lock_sem": {}, 
+        "t_delete_ip": {
+            "default_rule": {
+                "action": {
+                    "type": "delete_ip"
+                }, 
+                "name": "forward"
+            }
+        }, 
+        "t_offest_add": {
+            "default_rule": {
+                "action": {
+                    "type": "offest_add"
+                }, 
+                "name": "t0"
+            }
+        }, 
+        "t_sleep": {}, 
+        "t_delete_tcp": {
+            "default_rule": {
+                "action": {
+                    "type": "delete_tcp"
+                }, 
+                "name": "2"
+            }
+        }, 
+        "t_do_clone_i2i": {
+            "default_rule": {
+                "action": {
+                    "data": {
+                        "clone_port": {
+                            "value": "p0"
+                        }
+                    }, 
+                    "type": "do_clone_i2i"
+                }, 
+                "name": "1"
+            }
+        }, 
+        "in_tbl": {
+            "rules": [
+                {
+                    "action": {
+                        "data": {
+                            "espec": {
+                                "value": "v0.0"
+                            }
+                        }, 
+                        "type": "fwd_act"
+                    }, 
+                    "name": "p_v", 
+                    "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "p0"
+                        }
+                    }
+                }, 
+                {
+                    "action": {
+                        "data": {
+                            "espec": {
+                                "value": "p0"
+                            }
+                        }, 
+                        "type": "fwd_act"
+                    }, 
+                    "name": "v_p", 
+                    "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "v0.0"
+                        }
+                    }
+                }
+            ]
+        }, 
+        "t_do_recirculate2": {
+            "default_rule": {
+                "action": {
+                    "type": "do_recirculate2"
+                }, 
+                "name": "do"
+            }
+        }, 
+        "t_release_sem": {}, 
+        "t_delete_ip2": {
+            "default_rule": {
+                "action": {
+                    "type": "delete_ip2"
+                }, 
+                "name": "1"
+            }
+        }, 
+        "t_delete_ip3": {
+            "default_rule": {
+                "action": {
+                    "type": "delete_ip3"
+                }, 
+                "name": "default"
+            }
+        }, 
+        "t_do_recirculate": {
+            "default_rule": {
+                "action": {
+                    "type": "do_recirculate"
+                }, 
+                "name": "recirculate"
+            }
+        }, 
+        "truncate_table": {
+            "default_rule": {
+                "action": {
+                    "data": {
+                        "trunc_length": {
+                            "value": "1514"
+                        }
+                    }, 
+                    "type": "mirror_execute"
+                }, 
+                "name": "cut"
+            }
+        }
+    }
+}
