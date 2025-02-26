@@ -32,7 +32,7 @@ sudo make setup
 
 **Setup on Linux Computer 2 (without SmartNIC)**  
 
-sudo make2  
+sudo make setup
 
 
 **Setup on Window Computer**  
