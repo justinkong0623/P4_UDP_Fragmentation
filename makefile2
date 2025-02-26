@@ -1,11 +1,15 @@
-sudo ifconfig eno2 140.113.216.89 netmask 255.255.255.224 broadcast 140.113.216.95 up
-sudo ifconfig enp1s0 192.168.1.150 netmask 255.255.255.0 broadcast 192.168.1.255 up
-sudo ip route del default via 192.168.1.1 dev enp1s0
-sudo ip route del default via 140.113.216.65 dev eno2
-sudo ip route add default via 192.168.1.1 dev enp1s0 metric 101
-sudo ip route add default via 140.113.216.65 dev eno2 metric 100
+.PHONY:setup clean
 
-iptables -N IN_public_allow
-iptables -t filter -A IN_public_allow -p tcp -j ACCEPT
-iptables -t filter -A IN_public_allow -p udp -j ACCEPT
-iptables -t filter -A INPUT -j IN_public_allow
+setup: 
+  sudo ifconfig eno2 140.113.216.89 netmask 255.255.255.224 broadcast 140.113.216.95 up
+  sudo ifconfig enp1s0 192.168.1.150 netmask 255.255.255.0 broadcast 192.168.1.255 up
+  sudo ip route del default via 192.168.1.1 dev enp1s0
+  sudo ip route del default via 140.113.216.65 dev eno2
+  sudo ip route add default via 192.168.1.1 dev enp1s0 metric 101
+  sudo ip route add default via 140.113.216.65 dev eno2 metric 100
+  
+  iptables -N IN_public_allow
+  iptables -t filter -A IN_public_allow -p tcp -j ACCEPT
+  iptables -t filter -A IN_public_allow -p udp -j ACCEPT
+  iptables -t filter -A INPUT -j IN_public_allow
+clean:
