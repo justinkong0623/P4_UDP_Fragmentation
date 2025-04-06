@@ -1,4 +1,4 @@
-# P4_UDP_Fragmetation
+# P4_IP_Fragmetation
 **Setup on Window Computer**  
 
 1.Create a new project in Programmer Studio.  
